@@ -5,6 +5,8 @@
 
 OpenMetrics a specification built upon and carefully extending [Prometheus exposition format](https://prometheus.io/docs/instrumenting/exposition_formats/) in almost 100% backwards-compatible ways.
 
+> NOTE: This project recently moved to Prometheus and we are working on OpenMetrics 2.0! See the details in [#276](https://github.com/prometheus/OpenMetrics/issues/276) on how to participate!
+
 # Spec
 
 See [our spec file](specification/OpenMetrics.md) and [our proto](proto/openmetrics_data_model.proto).
