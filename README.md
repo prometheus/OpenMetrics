@@ -59,7 +59,7 @@ Once the issue is created, one of the maintainers should act by adding the neces
 
 ### Labeling issues
 
-#### `triage:deciding:*``
+#### `triage:deciding:*`
 
 These labels are applied to issues when it is unclear yet if they are something the project will take on.
 
