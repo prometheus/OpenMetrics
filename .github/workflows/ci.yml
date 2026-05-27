@@ -96,4 +96,5 @@ jobs:
       - name: Validate generated specification
         run: bundle exec kdrfc specification/OpenMetrics.md
       - name: Check generated files are committed
+        working-directory: ${{ github.workspace }}
         run: git diff --exit-code
