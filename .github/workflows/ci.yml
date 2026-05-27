@@ -84,15 +84,13 @@ jobs:
   kdrfc:
     name: kdrfc
     runs-on: ubuntu-latest
+    container:
+      image: ruby:2.7
     steps:
       - name: Checkout repository
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
           persist-credentials: false
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@b8d447ba7506ac7e0c8fbc50762276fb3b7df731 # v1
-        with:
-          ruby-version: "2.7"
       - name: Install Ruby dependencies
         run: bundle install
       - name: Validate generated specification
