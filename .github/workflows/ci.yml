@@ -108,17 +108,20 @@ jobs:
   kdrfc:
     name: kdrfc
     runs-on: ubuntu-latest
-    container:
-      image: ruby:2.7
     steps:
       - name: Checkout repository
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
           persist-credentials: false
-      - name: Install Ruby dependencies
-        run: bundle install
       - name: Validate generated specification
-        run: bundle exec kdrfc specification/OpenMetrics.md
+        run: |
+          docker run --rm \
+            --user "$(id -u):$(id -g)" \
+            -e BUNDLE_PATH=/tmp/bundle \
+            -e HOME=/tmp \
+            -v "${{ github.workspace }}:/workspace" \
+            -w /workspace \
+            ruby:2.7 \
+            sh -lc "bundle install && bundle exec kdrfc specification/OpenMetrics.md"
       - name: Check generated files are committed
-        working-directory: ${{ github.workspace }}
         run: git diff --exit-code
