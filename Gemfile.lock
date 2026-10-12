@@ -23,7 +23,7 @@ GEM
       unicode-scripts (~> 1.0)
     net-http-persistent (4.0.4)
       connection_pool (~> 2.2)
-    rexml (3.3.7)
+    rexml (3.4.2)
     unicode-blocks (1.10.0)
     unicode-name (1.13.0)
       unicode-types (~> 1.10)
