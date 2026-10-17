@@ -1,4 +1,3 @@
-* Ben Kochie
-* Brian Brazil
-* Richard Hartmann
-* Rob Skillington
+* Bartlomiej Plotka
+* David Ashpole
+* George Krajcsovits
